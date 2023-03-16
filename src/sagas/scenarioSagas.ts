@@ -14,6 +14,6 @@ export function* doLoadList() {
 		const filteredData = data.sort((a, b) => a.timestamp - b.timestamp);
 		yield put(getListSuccess(filteredData));
 	} catch (e) {
-		yield put(getListError('error fetching'));
+		yield put(getListError());
 	}
 }

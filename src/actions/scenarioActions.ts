@@ -1,5 +1,5 @@
 import { IScenarioState } from "../reducers/interfaces";
-import { GET_LIST, GET_LIST_SUCCESS } from "./actionTypes";
+import { GET_LIST, GET_LIST_ERROR, GET_LIST_SUCCESS } from "./actionTypes";
 
 export const getList = () => ({
 	type: GET_LIST
@@ -10,7 +10,6 @@ export const getListSuccess = (scenarioList: IScenarioState['list']) => ({
 	payload: scenarioList
 });
 
-export const getListError = (error: string) => ({
-	type: GET_LIST_SUCCESS,
-	payload: error
+export const getListError = () => ({
+	type: GET_LIST_ERROR,
 });

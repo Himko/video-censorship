@@ -1,5 +1,5 @@
 import { GET_LIST, GET_LIST_ERROR, GET_LIST_SUCCESS } from "../actions/actionTypes";
-import { IScenarioState } from "./interfaces";
+import { IEvent, IScenarioState } from "./interfaces";
 
 
 
@@ -8,7 +8,12 @@ const initState: IScenarioState = {
 	isFetching: false
 }
 
-export const scenarioReducer = function (state = initState, action: any) {
+interface IScenarioAction {
+	type: string;
+	payload: IEvent[]
+}
+
+export const scenarioReducer = function (state = initState, action: IScenarioAction) {
 	switch (action.type) {
 		
 		case GET_LIST:
