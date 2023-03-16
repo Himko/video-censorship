@@ -16,7 +16,7 @@ export const scenarioReducer = function (state = initState, action: any) {
 		case GET_LIST_SUCCESS:
 			return { ...state, list: action.payload, isFetching: false };
 		case GET_LIST_ERROR:
-			return { ...state, currentScenarioId: action.payload };
+			return { ...state, currentScenarioId: action.payload, isFetching: false};
     default:
       return state;
   }
