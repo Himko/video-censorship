@@ -4,6 +4,8 @@ import { Main } from './components/Main/Main';
 import { store } from './configureStore';
 
 function App() {
+    console.log('test')
+    
     return (
         <Provider store={store}>
             <Main />
